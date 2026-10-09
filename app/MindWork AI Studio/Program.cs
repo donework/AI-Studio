@@ -16,6 +16,7 @@ using AIStudio.Tools.ToolCallingSystem.Harness;
 using AIStudio.Tools.ToolCallingSystem.ToolCallingImplementations;
 using AIStudio.Tools.ToolCallingSystem.ToolCallingImplementations.Mailboxes;
 using AIStudio.Tools.ToolCallingSystem.ToolCallingImplementations.SemanticSearch;
+using AIStudio.Tools.ToolCallingSystem.ToolCallingImplementations.SharePoint;
 using AIStudio.Tools.ToolCallingSystem.ToolCallingImplementations.WebSearch;
 using AIStudio.Tools.ToolCallingSystem.ToolCallingImplementations.WebSearch.SearXNG;
 using AIStudio.Tools.ToolCallingSystem.ToolCallingImplementations.WebSearch.Staan;
@@ -178,6 +179,7 @@ internal sealed class Program
         builder.Services.AddSingleton<WebPageRetrievalService>();
         builder.Services.AddSingleton<IToolImplementation, ReadWebPageTool>();
         builder.Services.AddSingleton<IToolImplementation, ConfluenceSearchTool>();
+        builder.Services.AddSingleton<IToolImplementation, SharePointSearchTool>();
         builder.Services.AddSingleton<IWebSearchBackend, SearXNGSearchBackend>();
         builder.Services.AddSingleton<IWebSearchBackend, StaanSearchBackend>();
         builder.Services.AddSingleton<IWebSearchBackend, TavilySearchBackend>();

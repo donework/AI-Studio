@@ -809,13 +809,14 @@ CONFIG["SETTINGS"] = {}
 
 -- Configure the minimum provider confidence level required for individual tools or tool
 -- collections.
--- Tool IDs include: web_search, read_web_page, search_confluence, semantic_search
+-- Tool IDs include: web_search, read_web_page, search_confluence, search_sharepoint,
+-- semantic_search
 -- Collection IDs include: mailboxes
 -- Allowed values are: NONE, UNTRUSTED, VERY_LOW, LOW, MODERATE, MEDIUM, HIGH
 -- Defaults: web_search = VERY_LOW, read_web_page = VERY_LOW, search_confluence = HIGH,
--- semantic_search = NONE, mailboxes = VERY_LOW
--- search_confluence always searches with a HIGH-confidence provider only, whatever value is
--- set here.
+-- search_sharepoint = HIGH, semantic_search = NONE, mailboxes = VERY_LOW
+-- search_confluence and search_sharepoint always search with a HIGH-confidence provider only,
+-- whatever value is set here.
 -- semantic_search offers a provider only the data sources whose own confidence level it meets,
 -- so it needs no minimum of its own. A provider below a minimum set here has the data sources
 -- searched with every message instead.
@@ -823,6 +824,7 @@ CONFIG["SETTINGS"] = {}
 --     ["web_search"] = "VERY_LOW",
 --     ["read_web_page"] = "VERY_LOW",
 --     ["search_confluence"] = "HIGH",
+--     ["search_sharepoint"] = "HIGH",
 --     ["semantic_search"] = "NONE",
 --     ["mailboxes"] = "VERY_LOW"
 -- }
@@ -916,6 +918,21 @@ CONFIG["SETTINGS"] = {}
 -- Selecting search_confluence also selects read_web_page, which opens the pages found. If your
 -- wiki has a private or VPN address, add its host to read_web_page.allowedPrivateHosts as well.
 --
+-- Field names of the Search SharePoint tool, which supports SharePoint Server. SharePoint Online
+-- is not supported yet.
+--   baseUrl          Required HTTPS URL of a site of the SharePoint Server, for example
+--                    https://intranet.example.org/. Search asks this site's search API,
+--                    /_api/search/query, and so covers what the search of this site finds, which
+--                    usually includes the other sites of the SharePoint. It uses the current
+--                    user's operating-system sign-in when the SharePoint has a private or VPN
+--                    address. Redirects outside this URL are refused. A provider must have HIGH
+--                    confidence to receive search results.
+--   timeoutSeconds   Search request timeout in seconds, at most 120. Default: 30.
+-- Selecting search_sharepoint also selects read_web_page, which opens the pages found. The hits
+-- lie on every host your SharePoint serves, so add all of them to
+-- read_web_page.allowedPrivateHosts, for example "*.intranet.example.org". Files such as PDFs
+-- are found, but cannot be opened yet.
+--
 -- CONFIG["SETTINGS"]["DataTools.LockedToolSettings"] = {
 --     ["web_search.searxng.baseUrl"] = "https://searxng.example.org/",
 --     ["web_search.defaultLanguage"] = "de-DE",
@@ -923,7 +940,8 @@ CONFIG["SETTINGS"] = {}
 --     ["web_search.tavily.apiKey"] = "ENC:v1:<base64-encoded encrypted data>",
 --     ["read_web_page.freeAddressChoice"] = "OFF",
 --     ["read_web_page.allowedPrivateHosts"] = "example.org, *.example.org",
---     ["search_confluence.baseUrl"] = "https://wiki.example.org/confluence/"
+--     ["search_confluence.baseUrl"] = "https://wiki.example.org/confluence/",
+--     ["search_sharepoint.baseUrl"] = "https://intranet.example.org/"
 -- }
 --
 -- CONFIG["SETTINGS"]["DataTools.DefaultToolSettings"] = {
@@ -931,7 +949,8 @@ CONFIG["SETTINGS"] = {}
 --     ["web_search.defaultSafeSearch"] = "MODERATE",
 --     ["web_search.tavily.searchDepth"] = "basic",
 --     ["read_web_page.timeoutSeconds"] = "30",
---     ["search_confluence.timeoutSeconds"] = "30"
+--     ["search_confluence.timeoutSeconds"] = "30",
+--     ["search_sharepoint.timeoutSeconds"] = "30"
 -- }
 
 -- Configure the HTTP timeout for external requests, in seconds.
@@ -1196,10 +1215,11 @@ CONFIG["CHAT_TEMPLATES"] = {}
 --     -- A tool ID unknown to the installation is ignored, and so is a tool your
 --     -- organization switched off. A tool has to meet the confidence requirements of the
 --     -- provider in use, so it may stay unavailable even though this template names it.
---     -- Tool IDs include: web_search, read_web_page, search_confluence
+--     -- Tool IDs include: web_search, read_web_page, search_confluence, search_sharepoint
 --     -- Collection IDs include: mailboxes
---     -- Selecting search_confluence also selects read_web_page. semantic_search cannot be
---     -- selected here: it offers itself whenever the chat has data sources to search.
+--     -- Selecting search_confluence or search_sharepoint also selects read_web_page.
+--     -- semantic_search cannot be selected here: it offers itself whenever the chat has
+--     -- data sources to search.
 --     ["ToolIds"] = {
 --         "read_web_page",
 --     },
@@ -1313,9 +1333,9 @@ CONFIG["DOCUMENT_ANALYSIS_POLICIES"] = {}
 --     -- used for this policy. Omitting the list, or leaving it empty, means no tools.
 --     -- A listed tool must still meet the confidence requirements of the provider in
 --     -- use, so a tool may stay unavailable even though this policy permits it.
---     -- Tool IDs include: web_search, read_web_page, search_confluence
+--     -- Tool IDs include: web_search, read_web_page, search_confluence, search_sharepoint
 --     -- Collection IDs include: mailboxes
---     -- Allowing search_confluence also allows read_web_page.
+--     -- Allowing search_confluence or search_sharepoint also allows read_web_page.
 --     ["AllowedToolIds"] = { "web_search" },
 --
 --     -- Optional: preselect a provider or profile by ID.

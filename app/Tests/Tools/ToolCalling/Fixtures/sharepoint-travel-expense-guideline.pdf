@@ -1,0 +1,73 @@
+%PDF-1.4
+1 0 obj
+<< /Type /Catalog /Pages 2 0 R >>
+endobj
+2 0 obj
+<< /Type /Pages /Kids [4 0 R 6 0 R] /Count 2 >>
+endobj
+3 0 obj
+<< /Type /Font /Subtype /Type1 /BaseFont /Helvetica /Encoding /WinAnsiEncoding >>
+endobj
+4 0 obj
+<< /Type /Page /Parent 2 0 R /MediaBox [0 0 595 842] /Resources << /Font << /F1 3 0 R >> >> /Contents 5 0 R >>
+endobj
+5 0 obj
+<< /Length 535 >>
+stream
+BT
+/F1 12 Tf
+72 760 Td
+16 TL
+(Travel Expense Guideline) Tj T*
+() Tj T*
+(1. Scope) Tj T*
+(This guideline applies to every business trip of Example Corp staff.) Tj T*
+() Tj T*
+(2. Booking) Tj T*
+(A rail journey is preferred over a flight for every travel below 600 km.) Tj T*
+(Flights are booked in economy class through the travel desk.) Tj T*
+() Tj T*
+(3. Receipts) Tj T*
+(Receipts for travel expenses are handed in within four weeks after the trip.) Tj T*
+(Without a receipt, an expense of more than 25 EUR is not refunded.) Tj T*
+ET
+endstream
+endobj
+6 0 obj
+<< /Type /Page /Parent 2 0 R /MediaBox [0 0 595 842] /Resources << /Font << /F1 3 0 R >> >> /Contents 7 0 R >>
+endobj
+7 0 obj
+<< /Length 272 >>
+stream
+BT
+/F1 12 Tf
+72 760 Td
+16 TL
+(4. Daily allowance) Tj T*
+(The allowance is 28 EUR for a full day and 14 EUR for the day of arrival) Tj T*
+(and the day of departure.) Tj T*
+() Tj T*
+(5. Contact) Tj T*
+(Questions go to the travel desk, room B 2.17, extension 4711.) Tj T*
+ET
+endstream
+endobj
+8 0 obj
+<< /Title (Travel Expense Guideline) /Producer (AI Studio test fixture) >>
+endobj
+xref
+0 9
+0000000000 65535 f 
+0000000009 00000 n 
+0000000058 00000 n 
+0000000121 00000 n 
+0000000218 00000 n 
+0000000344 00000 n 
+0000000929 00000 n 
+0000001055 00000 n 
+0000001377 00000 n 
+trailer
+<< /Size 9 /Root 1 0 R /Info 8 0 R >>
+startxref
+1467
+%%EOF

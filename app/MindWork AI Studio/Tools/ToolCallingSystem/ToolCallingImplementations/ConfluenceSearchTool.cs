@@ -231,13 +231,9 @@ public sealed class ConfluenceSearchTool(WebPageRetrievalService webPageRetrieva
         };
     }
 
-    private static bool IsWikiHost(Uri baseUrl, string host) => WebHostHelper.Normalize(host) == WebHostHelper.Normalize(baseUrl.Host);
+    private static bool IsWikiHost(Uri baseUrl, string host) => ConfiguredSiteUrl.IsHost(baseUrl, host);
 
-    internal static bool IsWithinWiki(Uri baseUrl, Uri url) =>
-        url.Scheme == baseUrl.Scheme &&
-        IsWikiHost(baseUrl, url.Host) &&
-        url.Port == baseUrl.Port &&
-        url.AbsolutePath.StartsWith(baseUrl.AbsolutePath, StringComparison.Ordinal);
+    internal static bool IsWithinWiki(Uri baseUrl, Uri url) => ConfiguredSiteUrl.IsWithin(baseUrl, url);
 
     // Confluence answers a request without a valid session with its login page, which would
     // otherwise reach the model as a search without results:
@@ -245,19 +241,7 @@ public sealed class ConfluenceSearchTool(WebPageRetrievalService webPageRetrieva
         url.AbsolutePath.EndsWith("/login.action", StringComparison.OrdinalIgnoreCase) ||
         url.Query.Contains("os_destination=", StringComparison.OrdinalIgnoreCase);
 
-    internal static bool TryParseBaseUrl(string? value, [NotNullWhen(true)] out Uri? baseUrl)
-    {
-        baseUrl = null;
-        if (!Uri.TryCreate(value?.Trim(), UriKind.Absolute, out var uri) ||
-            uri.Scheme is not "https" ||
-            !string.IsNullOrWhiteSpace(uri.UserInfo) ||
-            !string.IsNullOrWhiteSpace(uri.Query) ||
-            !string.IsNullOrWhiteSpace(uri.Fragment))
-            return false;
-
-        baseUrl = new Uri(uri.AbsoluteUri.TrimEnd('/') + '/');
-        return true;
-    }
+    internal static bool TryParseBaseUrl(string? value, [NotNullWhen(true)] out Uri? baseUrl) => ConfiguredSiteUrl.TryParse(value, out baseUrl);
 
     internal static Uri BuildSearchUrl(Uri baseUrl, string query, string? spaceKey)
     {

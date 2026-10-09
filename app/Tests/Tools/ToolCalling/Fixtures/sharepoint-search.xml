@@ -1,0 +1,96 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<d:query xmlns:d="http://schemas.microsoft.com/ado/2007/08/dataservices" xmlns:m="http://schemas.microsoft.com/ado/2007/08/dataservices/metadata" xmlns:georss="http://www.georss.org/georss" xmlns:gml="http://www.opengis.net/gml" m:type="Microsoft.Office.Server.Search.REST.SearchResult"><d:ElapsedTime m:type="Edm.Int32">212</d:ElapsedTime><d:PrimaryQueryResult m:type="Microsoft.Office.Server.Search.REST.QueryResult"><d:CustomResults m:type="Collection(Microsoft.Office.Server.Search.REST.CustomResult)"/><d:QueryId>11111111-2222-4333-8444-555555555555</d:QueryId><d:QueryRuleId m:type="Edm.Guid">00000000-0000-0000-0000-000000000000</d:QueryRuleId><d:RefinementResults m:null="true"/><d:RelevantResults m:type="Microsoft.Office.Server.Search.REST.RelevantResults"><d:GroupTemplateId m:null="true"/><d:ItemTemplateId m:null="true"/><d:Properties m:type="Collection(SP.KeyValue)"><d:element><d:Key>ExecutionTimeMs</d:Key><d:Value>64</d:Value><d:ValueType>Edm.Int32</d:ValueType></d:element><d:element><d:Key>QueryModification</d:Key><d:Value>travel expenses -ContentClass=urn:content-class:SPSPeople</d:Value><d:ValueType>Edm.String</d:ValueType></d:element><d:element><d:Key>StartRecord</d:Key><d:Value>0</d:Value><d:ValueType>Edm.Int32</d:ValueType></d:element></d:Properties><d:ResultTitle m:null="true"/><d:ResultTitleUrl m:null="true"/><d:RowCount m:type="Edm.Int32">7</d:RowCount><d:Table m:type="SP.SimpleDataTable"><d:Rows>
+<d:element m:type="SP.SimpleDataRow"><d:Cells>
+<d:element m:type="SP.KeyValue"><d:Key>Rank</d:Key><d:Value>27.2462329864502</d:Value><d:ValueType>Edm.Double</d:ValueType></d:element>
+<d:element m:type="SP.KeyValue"><d:Key>DocId</d:Key><d:Value>40001</d:Value><d:ValueType>Edm.Int64</d:ValueType></d:element>
+<d:element m:type="SP.KeyValue"><d:Key>Title</d:Key><d:Value>New travel expense rules from January</d:Value><d:ValueType>Edm.String</d:ValueType></d:element>
+<d:element m:type="SP.KeyValue"><d:Key>Path</d:Key><d:Value>https://intranet.example.org/News/Pages/travel-expense-rules.aspx</d:Value><d:ValueType>Edm.String</d:ValueType></d:element>
+<d:element m:type="SP.KeyValue"><d:Key>HitHighlightedSummary</d:Key><d:Value/><d:ValueType>Edm.String</d:ValueType></d:element>
+<d:element m:type="SP.KeyValue"><d:Key>LastModifiedTime</d:Key><d:Value>2026-01-12T11:05:08.0000000Z</d:Value><d:ValueType>Edm.DateTime</d:ValueType></d:element>
+<d:element m:type="SP.KeyValue"><d:Key>FileType</d:Key><d:Value>html</d:Value><d:ValueType>Edm.String</d:ValueType></d:element>
+<d:element m:type="SP.KeyValue"><d:Key>SPWebUrl</d:Key><d:Value>https://intranet.example.org/News</d:Value><d:ValueType>Edm.String</d:ValueType></d:element>
+<d:element m:type="SP.KeyValue"><d:Key>PartitionId</d:Key><d:Value>aaaaaaaa-bbbb-4ccc-8ddd-eeeeeeeeeeee</d:Value><d:ValueType>Edm.Guid</d:ValueType></d:element>
+<d:element m:type="SP.KeyValue"><d:Key>Culture</d:Key><d:Value>en-US</d:Value><d:ValueType>Edm.String</d:ValueType></d:element>
+</d:Cells></d:element>
+<d:element m:type="SP.SimpleDataRow"><d:Cells>
+<d:element m:type="SP.KeyValue"><d:Key>Rank</d:Key><d:Value>27.2325782775879</d:Value><d:ValueType>Edm.Double</d:ValueType></d:element>
+<d:element m:type="SP.KeyValue"><d:Key>DocId</d:Key><d:Value>40002</d:Value><d:ValueType>Edm.Int64</d:ValueType></d:element>
+<d:element m:type="SP.KeyValue"><d:Key>Title</d:Key><d:Value>Travel Expense Guideline</d:Value><d:ValueType>Edm.String</d:ValueType></d:element>
+<d:element m:type="SP.KeyValue"><d:Key>Path</d:Key><d:Value>https://docs.example.org/Documents/Travel Expense Guideline.pdf</d:Value><d:ValueType>Edm.String</d:ValueType></d:element>
+<d:element m:type="SP.KeyValue"><d:Key>HitHighlightedSummary</d:Key><d:Value xml:space="preserve">Receipts for &lt;c0&gt;travel&lt;/c0&gt; &lt;c1&gt;expenses&lt;/c1&gt; are handed in within four weeks &lt;ddd/&gt; a rail journey is preferred over a flight for every &lt;c0&gt;travel&lt;/c0&gt; below 600 km &lt;ddd/&gt; </d:Value><d:ValueType>Edm.String</d:ValueType></d:element>
+<d:element m:type="SP.KeyValue"><d:Key>LastModifiedTime</d:Key><d:Value>2025-07-08T05:55:34.0000000Z</d:Value><d:ValueType>Edm.DateTime</d:ValueType></d:element>
+<d:element m:type="SP.KeyValue"><d:Key>FileType</d:Key><d:Value>pdf</d:Value><d:ValueType>Edm.String</d:ValueType></d:element>
+<d:element m:type="SP.KeyValue"><d:Key>SPWebUrl</d:Key><d:Value>https://docs.example.org</d:Value><d:ValueType>Edm.String</d:ValueType></d:element>
+<d:element m:type="SP.KeyValue"><d:Key>PartitionId</d:Key><d:Value>aaaaaaaa-bbbb-4ccc-8ddd-eeeeeeeeeeee</d:Value><d:ValueType>Edm.Guid</d:ValueType></d:element>
+<d:element m:type="SP.KeyValue"><d:Key>Culture</d:Key><d:Value>en-US</d:Value><d:ValueType>Edm.String</d:ValueType></d:element>
+</d:Cells></d:element>
+<d:element m:type="SP.SimpleDataRow"><d:Cells>
+<d:element m:type="SP.KeyValue"><d:Key>Rank</d:Key><d:Value>27.2136917114258</d:Value><d:ValueType>Edm.Double</d:ValueType></d:element>
+<d:element m:type="SP.KeyValue"><d:Key>DocId</d:Key><d:Value>40003</d:Value><d:ValueType>Edm.Int64</d:ValueType></d:element>
+<d:element m:type="SP.KeyValue"><d:Key>Title</d:Key><d:Value>Finance Team Site</d:Value><d:ValueType>Edm.String</d:ValueType></d:element>
+<d:element m:type="SP.KeyValue"><d:Key>Path</d:Key><d:Value>https://teams.example.org/</d:Value><d:ValueType>Edm.String</d:ValueType></d:element>
+<d:element m:type="SP.KeyValue"><d:Key>HitHighlightedSummary</d:Key><d:Value xml:space="preserve">Template for &lt;c0&gt;travel&lt;/c0&gt; requests
+
+
+
+07.08.2025 09:37 Finance &lt;ddd/&gt; &lt;c1&gt;Expenses&lt;/c1&gt;_Overview_2025
+
+
+
+09.05.2025 14:01 Finance &lt;ddd/&gt; </d:Value><d:ValueType>Edm.String</d:ValueType></d:element>
+<d:element m:type="SP.KeyValue"><d:Key>LastModifiedTime</d:Key><d:Value>2024-11-18T12:27:40.0000000Z</d:Value><d:ValueType>Edm.DateTime</d:ValueType></d:element>
+<d:element m:type="SP.KeyValue"><d:Key>FileType</d:Key><d:Value>html</d:Value><d:ValueType>Edm.String</d:ValueType></d:element>
+<d:element m:type="SP.KeyValue"><d:Key>SPWebUrl</d:Key><d:Value>https://teams.example.org</d:Value><d:ValueType>Edm.String</d:ValueType></d:element>
+<d:element m:type="SP.KeyValue"><d:Key>PartitionId</d:Key><d:Value>aaaaaaaa-bbbb-4ccc-8ddd-eeeeeeeeeeee</d:Value><d:ValueType>Edm.Guid</d:ValueType></d:element>
+<d:element m:type="SP.KeyValue"><d:Key>Culture</d:Key><d:Value>en-US</d:Value><d:ValueType>Edm.String</d:ValueType></d:element>
+</d:Cells></d:element>
+<d:element m:type="SP.SimpleDataRow"><d:Cells>
+<d:element m:type="SP.KeyValue"><d:Key>Rank</d:Key><d:Value>27.2111473083496</d:Value><d:ValueType>Edm.Double</d:ValueType></d:element>
+<d:element m:type="SP.KeyValue"><d:Key>DocId</d:Key><d:Value>40004</d:Value><d:ValueType>Edm.Int64</d:ValueType></d:element>
+<d:element m:type="SP.KeyValue"><d:Key>Title</d:Key><d:Value m:null="true"/><d:ValueType>Null</d:ValueType></d:element>
+<d:element m:type="SP.KeyValue"><d:Key>Path</d:Key><d:Value>https://teams.example.org/sites/Standards/Shared Documents/Visitor Registration.pdf</d:Value><d:ValueType>Edm.String</d:ValueType></d:element>
+<d:element m:type="SP.KeyValue"><d:Key>HitHighlightedSummary</d:Key><d:Value>Visitors are registered two working days ahead &lt;ddd/&gt; costs of their &lt;c0&gt;travel&lt;/c0&gt; are not covered</d:Value><d:ValueType>Edm.String</d:ValueType></d:element>
+<d:element m:type="SP.KeyValue"><d:Key>LastModifiedTime</d:Key><d:Value>2025-04-22T11:44:14.0000000Z</d:Value><d:ValueType>Edm.DateTime</d:ValueType></d:element>
+<d:element m:type="SP.KeyValue"><d:Key>FileType</d:Key><d:Value>pdf</d:Value><d:ValueType>Edm.String</d:ValueType></d:element>
+<d:element m:type="SP.KeyValue"><d:Key>SPWebUrl</d:Key><d:Value>https://teams.example.org/sites/Standards</d:Value><d:ValueType>Edm.String</d:ValueType></d:element>
+<d:element m:type="SP.KeyValue"><d:Key>PartitionId</d:Key><d:Value>aaaaaaaa-bbbb-4ccc-8ddd-eeeeeeeeeeee</d:Value><d:ValueType>Edm.Guid</d:ValueType></d:element>
+<d:element m:type="SP.KeyValue"><d:Key>Culture</d:Key><d:Value>en-US</d:Value><d:ValueType>Edm.String</d:ValueType></d:element>
+</d:Cells></d:element>
+<d:element m:type="SP.SimpleDataRow"><d:Cells>
+<d:element m:type="SP.KeyValue"><d:Key>Rank</d:Key><d:Value>27.2101974487305</d:Value><d:ValueType>Edm.Double</d:ValueType></d:element>
+<d:element m:type="SP.KeyValue"><d:Key>DocId</d:Key><d:Value>40005</d:Value><d:ValueType>Edm.Int64</d:ValueType></d:element>
+<d:element m:type="SP.KeyValue"><d:Key>Title</d:Key><d:Value>Expense report form</d:Value><d:ValueType>Edm.String</d:ValueType></d:element>
+<d:element m:type="SP.KeyValue"><d:Key>Path</d:Key><d:Value>file://fileserver/finance/forms/expense-report.docx</d:Value><d:ValueType>Edm.String</d:ValueType></d:element>
+<d:element m:type="SP.KeyValue"><d:Key>HitHighlightedSummary</d:Key><d:Value>Form for &lt;c0&gt;travel&lt;/c0&gt; &lt;c1&gt;expenses&lt;/c1&gt;</d:Value><d:ValueType>Edm.String</d:ValueType></d:element>
+<d:element m:type="SP.KeyValue"><d:Key>LastModifiedTime</d:Key><d:Value>2023-10-02T11:04:05.0000000Z</d:Value><d:ValueType>Edm.DateTime</d:ValueType></d:element>
+<d:element m:type="SP.KeyValue"><d:Key>FileType</d:Key><d:Value>docx</d:Value><d:ValueType>Edm.String</d:ValueType></d:element>
+<d:element m:type="SP.KeyValue"><d:Key>SPWebUrl</d:Key><d:Value m:null="true"/><d:ValueType>Null</d:ValueType></d:element>
+<d:element m:type="SP.KeyValue"><d:Key>PartitionId</d:Key><d:Value>aaaaaaaa-bbbb-4ccc-8ddd-eeeeeeeeeeee</d:Value><d:ValueType>Edm.Guid</d:ValueType></d:element>
+<d:element m:type="SP.KeyValue"><d:Key>Culture</d:Key><d:Value>en-US</d:Value><d:ValueType>Edm.String</d:ValueType></d:element>
+</d:Cells></d:element>
+<d:element m:type="SP.SimpleDataRow"><d:Cells>
+<d:element m:type="SP.KeyValue"><d:Key>Rank</d:Key><d:Value>27.2050075531006</d:Value><d:ValueType>Edm.Double</d:ValueType></d:element>
+<d:element m:type="SP.KeyValue"><d:Key>DocId</d:Key><d:Value>40006</d:Value><d:ValueType>Edm.Int64</d:ValueType></d:element>
+<d:element m:type="SP.KeyValue"><d:Key>Title</d:Key><d:Value>  Travel
+ budget   2026 </d:Value><d:ValueType>Edm.String</d:ValueType></d:element>
+<d:element m:type="SP.KeyValue"><d:Key>Path</d:Key><d:Value>https://teams.example.org/sites/Finance/Shared Documents/Travel budget 2026.XLSX</d:Value><d:ValueType>Edm.String</d:ValueType></d:element>
+<d:element m:type="SP.KeyValue"><d:Key>HitHighlightedSummary</d:Key><d:Value m:null="true"/><d:ValueType>Null</d:ValueType></d:element>
+<d:element m:type="SP.KeyValue"><d:Key>LastModifiedTime</d:Key><d:Value m:null="true"/><d:ValueType>Null</d:ValueType></d:element>
+<d:element m:type="SP.KeyValue"><d:Key>FileType</d:Key><d:Value>XLSX</d:Value><d:ValueType>Edm.String</d:ValueType></d:element>
+<d:element m:type="SP.KeyValue"><d:Key>SPWebUrl</d:Key><d:Value>https://teams.example.org/sites/Finance</d:Value><d:ValueType>Edm.String</d:ValueType></d:element>
+<d:element m:type="SP.KeyValue"><d:Key>PartitionId</d:Key><d:Value>aaaaaaaa-bbbb-4ccc-8ddd-eeeeeeeeeeee</d:Value><d:ValueType>Edm.Guid</d:ValueType></d:element>
+<d:element m:type="SP.KeyValue"><d:Key>Culture</d:Key><d:Value>en-US</d:Value><d:ValueType>Edm.String</d:ValueType></d:element>
+</d:Cells></d:element>
+<d:element m:type="SP.SimpleDataRow"><d:Cells>
+<d:element m:type="SP.KeyValue"><d:Key>Rank</d:Key><d:Value>27.2018814086914</d:Value><d:ValueType>Edm.Double</d:ValueType></d:element>
+<d:element m:type="SP.KeyValue"><d:Key>DocId</d:Key><d:Value>40007</d:Value><d:ValueType>Edm.Int64</d:ValueType></d:element>
+<d:element m:type="SP.KeyValue"><d:Key>Title</d:Key><d:Value>Canteen menu</d:Value><d:ValueType>Edm.String</d:ValueType></d:element>
+<d:element m:type="SP.KeyValue"><d:Key>Path</d:Key><d:Value>https://intranet.example.org/Pages/canteen.aspx</d:Value><d:ValueType>Edm.String</d:ValueType></d:element>
+<d:element m:type="SP.KeyValue"><d:Key>HitHighlightedSummary</d:Key><d:Value>The canteen stays closed during the &lt;c0&gt;travel&lt;/c0&gt; fair in May</d:Value><d:ValueType>Edm.String</d:ValueType></d:element>
+<d:element m:type="SP.KeyValue"><d:Key>LastModifiedTime</d:Key><d:Value>2026-09-30T06:15:00.0000000Z</d:Value><d:ValueType>Edm.DateTime</d:ValueType></d:element>
+<d:element m:type="SP.KeyValue"><d:Key>FileType</d:Key><d:Value>html</d:Value><d:ValueType>Edm.String</d:ValueType></d:element>
+<d:element m:type="SP.KeyValue"><d:Key>SPWebUrl</d:Key><d:Value>https://intranet.example.org</d:Value><d:ValueType>Edm.String</d:ValueType></d:element>
+<d:element m:type="SP.KeyValue"><d:Key>PartitionId</d:Key><d:Value>aaaaaaaa-bbbb-4ccc-8ddd-eeeeeeeeeeee</d:Value><d:ValueType>Edm.Guid</d:ValueType></d:element>
+<d:element m:type="SP.KeyValue"><d:Key>Culture</d:Key><d:Value>en-US</d:Value><d:ValueType>Edm.String</d:ValueType></d:element>
+</d:Cells></d:element>
+</d:Rows></d:Table><d:TotalRows m:type="Edm.Int32">37</d:TotalRows><d:TotalRowsIncludingDuplicates m:type="Edm.Int32">41</d:TotalRowsIncludingDuplicates></d:RelevantResults><d:SpecialTermResults m:null="true"/></d:PrimaryQueryResult><d:Properties m:type="Collection(SP.KeyValue)"><d:element><d:Key>RowLimit</d:Key><d:Value>10</d:Value><d:ValueType>Edm.Int32</d:ValueType></d:element><d:element><d:Key>SourceId</d:Key><d:Value>8413cd39-2156-4e00-b54d-11efd9abdb89</d:Value><d:ValueType>Edm.Guid</d:ValueType></d:element><d:element><d:Key>IsPartial</d:Key><d:Value>false</d:Value><d:ValueType>Edm.Boolean</d:ValueType></d:element><d:element><d:Key>HasParseException</d:Key><d:Value>false</d:Value><d:ValueType>Edm.Boolean</d:ValueType></d:element></d:Properties><d:SecondaryQueryResults m:type="Collection(Microsoft.Office.Server.Search.REST.QueryResult)"/><d:SpellingSuggestion/><d:TriggeredRules m:type="Collection(Edm.Guid)"/></d:query>

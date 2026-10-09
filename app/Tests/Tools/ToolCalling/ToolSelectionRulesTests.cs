@@ -17,6 +17,7 @@ namespace AIStudio.Tests.Tools.ToolCalling;
 public sealed class ToolSelectionRulesTests : ToolRegistryTestBase
 {
     private const string SEARCH_CONFLUENCE = ToolSelectionRules.SEARCH_CONFLUENCE_TOOL_ID;
+    private const string SEARCH_SHAREPOINT = ToolSelectionRules.SEARCH_SHAREPOINT_TOOL_ID;
     private const string READ_WEB_PAGE = ToolSelectionRules.READ_WEB_PAGE_TOOL_ID;
     private const string WEB_SEARCH = ToolSelectionRules.WEB_SEARCH_TOOL_ID;
     private const string SEMANTIC_SEARCH = ToolSelectionRules.SEMANTIC_SEARCH_TOOL_ID;
@@ -45,11 +46,17 @@ public sealed class ToolSelectionRulesTests : ToolRegistryTestBase
         Assert.That(this.CreateAppRegistry().NormalizeSelection([SEARCH_CONFLUENCE]), Is.EquivalentTo(new[] { SEARCH_CONFLUENCE, READ_WEB_PAGE }), "The search only finds pages; without Read Web Page the model could not open a single result.");
     }
 
+    [Test]
+    public void SearchSharePointBringsReadWebPageAlong()
+    {
+        Assert.That(this.CreateAppRegistry().NormalizeSelection([SEARCH_SHAREPOINT]), Is.EquivalentTo(new[] { SEARCH_SHAREPOINT, READ_WEB_PAGE }), "The search returns excerpts only; without Read Web Page the model could not open a single hit.");
+    }
+
     [TestCase(READ_WEB_PAGE)]
     [TestCase(WEB_SEARCH)]
     public void OtherToolsBringNothingAlong(string toolId)
     {
-        Assert.That(this.CreateAppRegistry().NormalizeSelection([toolId]), Is.EquivalentTo(new[] { toolId }), "Only the search of the wiki depends on another tool. The reader in particular does not pull a search in.");
+        Assert.That(this.CreateAppRegistry().NormalizeSelection([toolId]), Is.EquivalentTo(new[] { toolId }), "Only the searches of the wiki and of SharePoint depend on another tool. The reader in particular does not pull a search in.");
     }
 
     [Test]
@@ -110,7 +117,7 @@ public sealed class ToolSelectionRulesTests : ToolRegistryTestBase
 
         Assert.Multiple(() =>
         {
-            Assert.That(catalog.Select(item => item.Id), Is.EquivalentTo(new[] { MAILBOXES, WEB_SEARCH, READ_WEB_PAGE, SEARCH_CONFLUENCE }), "Semantic Search is nobody's to select, and the mail tools are one entry.");
+            Assert.That(catalog.Select(item => item.Id), Is.EquivalentTo(new[] { MAILBOXES, WEB_SEARCH, READ_WEB_PAGE, SEARCH_CONFLUENCE, SEARCH_SHAREPOINT }), "Semantic Search is nobody's to select, and the mail tools are one entry.");
             Assert.That(mailboxes.Tools.Select(tool => tool.Definition.Id), Is.EqualTo(new[] { SEARCH_MAILS, READ_MAIL, COUNT_MAILS }), "In the order the collection lists them.");
         });
     }
@@ -146,6 +153,7 @@ public sealed class ToolSelectionRulesTests : ToolRegistryTestBase
         new TestTool(Definition(WEB_SEARCH)),
         new TestTool(Definition(READ_WEB_PAGE)),
         new TestTool(Definition(SEARCH_CONFLUENCE)),
+        new TestTool(Definition(SEARCH_SHAREPOINT)),
         new TestTool(Definition(SEMANTIC_SEARCH, activation: ToolActivation.CONTEXT)),
         new TestTool(Definition(SEARCH_MAILS)),
         new TestTool(Definition(READ_MAIL)),

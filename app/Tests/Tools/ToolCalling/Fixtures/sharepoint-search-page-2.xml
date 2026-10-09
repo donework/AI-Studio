@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<d:query xmlns:d="http://schemas.microsoft.com/ado/2007/08/dataservices" xmlns:m="http://schemas.microsoft.com/ado/2007/08/dataservices/metadata" m:type="Microsoft.Office.Server.Search.REST.SearchResult"><d:ElapsedTime m:type="Edm.Int32">187</d:ElapsedTime><d:PrimaryQueryResult m:type="Microsoft.Office.Server.Search.REST.QueryResult"><d:CustomResults m:type="Collection(Microsoft.Office.Server.Search.REST.CustomResult)"/><d:QueryId>11111111-2222-4333-8444-777777777777</d:QueryId><d:QueryRuleId m:type="Edm.Guid">00000000-0000-0000-0000-000000000000</d:QueryRuleId><d:RefinementResults m:null="true"/><d:RelevantResults m:type="Microsoft.Office.Server.Search.REST.RelevantResults"><d:GroupTemplateId m:null="true"/><d:ItemTemplateId m:null="true"/><d:Properties m:type="Collection(SP.KeyValue)"><d:element><d:Key>StartRecord</d:Key><d:Value>10</d:Value><d:ValueType>Edm.Int32</d:ValueType></d:element></d:Properties><d:ResultTitle m:null="true"/><d:ResultTitleUrl m:null="true"/><d:RowCount m:type="Edm.Int32">2</d:RowCount><d:Table m:type="SP.SimpleDataTable"><d:Rows>
+<d:element m:type="SP.SimpleDataRow"><d:Cells>
+<d:element m:type="SP.KeyValue"><d:Key>Rank</d:Key><d:Value>21.8140029907227</d:Value><d:ValueType>Edm.Double</d:ValueType></d:element>
+<d:element m:type="SP.KeyValue"><d:Key>DocId</d:Key><d:Value>40011</d:Value><d:ValueType>Edm.Int64</d:ValueType></d:element>
+<d:element m:type="SP.KeyValue"><d:Key>Title</d:Key><d:Value>Vaccinations before a business trip</d:Value><d:ValueType>Edm.String</d:ValueType></d:element>
+<d:element m:type="SP.KeyValue"><d:Key>Path</d:Key><d:Value>https://intranet.example.org/Health/Pages/travel-vaccinations.aspx</d:Value><d:ValueType>Edm.String</d:ValueType></d:element>
+<d:element m:type="SP.KeyValue"><d:Key>HitHighlightedSummary</d:Key><d:Value xml:space="preserve">The company doctor advises on vaccinations before every &lt;c0&gt;travel&lt;/c0&gt; outside of Europe &lt;ddd/&gt; </d:Value><d:ValueType>Edm.String</d:ValueType></d:element>
+<d:element m:type="SP.KeyValue"><d:Key>LastModifiedTime</d:Key><d:Value>2026-03-03T09:20:11.0000000Z</d:Value><d:ValueType>Edm.DateTime</d:ValueType></d:element>
+<d:element m:type="SP.KeyValue"><d:Key>FileType</d:Key><d:Value>html</d:Value><d:ValueType>Edm.String</d:ValueType></d:element>
+<d:element m:type="SP.KeyValue"><d:Key>SPWebUrl</d:Key><d:Value>https://intranet.example.org/Health</d:Value><d:ValueType>Edm.String</d:ValueType></d:element>
+</d:Cells></d:element>
+<d:element m:type="SP.SimpleDataRow"><d:Cells>
+<d:element m:type="SP.KeyValue"><d:Key>Rank</d:Key><d:Value>21.7902183532715</d:Value><d:ValueType>Edm.Double</d:ValueType></d:element>
+<d:element m:type="SP.KeyValue"><d:Key>DocId</d:Key><d:Value>40012</d:Value><d:ValueType>Edm.Int64</d:ValueType></d:element>
+<d:element m:type="SP.KeyValue"><d:Key>Title</d:Key><d:Value>Pool cars and car sharing</d:Value><d:ValueType>Edm.String</d:ValueType></d:element>
+<d:element m:type="SP.KeyValue"><d:Key>Path</d:Key><d:Value>https://intranet.example.org/Facilities/Pages/pool-cars.aspx</d:Value><d:ValueType>Edm.String</d:ValueType></d:element>
+<d:element m:type="SP.KeyValue"><d:Key>HitHighlightedSummary</d:Key><d:Value>A pool car is booked for a &lt;c0&gt;travel&lt;/c0&gt; of up to three days</d:Value><d:ValueType>Edm.String</d:ValueType></d:element>
+<d:element m:type="SP.KeyValue"><d:Key>LastModifiedTime</d:Key><d:Value>2025-11-20T13:42:00.0000000Z</d:Value><d:ValueType>Edm.DateTime</d:ValueType></d:element>
+<d:element m:type="SP.KeyValue"><d:Key>FileType</d:Key><d:Value>html</d:Value><d:ValueType>Edm.String</d:ValueType></d:element>
+<d:element m:type="SP.KeyValue"><d:Key>SPWebUrl</d:Key><d:Value>https://intranet.example.org/Facilities</d:Value><d:ValueType>Edm.String</d:ValueType></d:element>
+</d:Cells></d:element>
+</d:Rows></d:Table><d:TotalRows m:type="Edm.Int32">12</d:TotalRows><d:TotalRowsIncludingDuplicates m:type="Edm.Int32">12</d:TotalRowsIncludingDuplicates></d:RelevantResults><d:SpecialTermResults m:null="true"/></d:PrimaryQueryResult><d:Properties m:type="Collection(SP.KeyValue)"/><d:SecondaryQueryResults m:type="Collection(Microsoft.Office.Server.Search.REST.QueryResult)"/><d:SpellingSuggestion/><d:TriggeredRules m:type="Collection(Edm.Guid)"/></d:query>

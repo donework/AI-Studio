@@ -419,10 +419,11 @@ public sealed class ToolRegistry
     /// appear on the security card of a plugin and in its audit without the selection having any
     /// say in whether it runs. An ID this installation does not know stays, because the tool may
     /// arrive with a plugin installed later.<br/><br/>
-    /// It also adds what a collection depends on: Search Confluence only finds pages, so it brings
-    /// Read Web Page along to open them. An added collection keeps its own rules. It is still
-    /// dropped when it is switched off or the provider's confidence is too low, and Read Web Page
-    /// reaches a wiki on a private or VPN address only when its host is allowed there.<br/><br/>
+    /// It also adds what a collection depends on: Search Confluence and Search SharePoint only
+    /// find pages, so they bring Read Web Page along to open them. An added collection keeps its
+    /// own rules. It is still dropped when it is switched off or the provider's confidence is too
+    /// low, and Read Web Page reaches a wiki or a SharePoint on a private or VPN address only when
+    /// its host is allowed there.<br/><br/>
     /// Every place which shows or stores a selection normalizes it, the tool selection fields
     /// included. That way a chat, a template, a policy, or an assistant plugin shows the collections
     /// which will actually run.
@@ -432,7 +433,8 @@ public sealed class ToolRegistry
     public HashSet<string> NormalizeSelection(IEnumerable<string> selectedIds)
     {
         var normalized = selectedIds.Select(this.GetCollectionId).ToHashSet(StringComparer.Ordinal);
-        if (normalized.Contains(this.GetCollectionId(ToolSelectionRules.SEARCH_CONFLUENCE_TOOL_ID)))
+        if (normalized.Contains(this.GetCollectionId(ToolSelectionRules.SEARCH_CONFLUENCE_TOOL_ID)) ||
+            normalized.Contains(this.GetCollectionId(ToolSelectionRules.SEARCH_SHAREPOINT_TOOL_ID)))
             normalized.Add(this.GetCollectionId(ToolSelectionRules.READ_WEB_PAGE_TOOL_ID));
 
         normalized.RemoveWhere(id => this.GetDefinition(id) is { Activation: ToolActivation.CONTEXT });
